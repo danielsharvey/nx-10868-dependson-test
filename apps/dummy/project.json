@@ -3,6 +3,15 @@
   "sourceRoot": "apps/dummy/src",
   "prefix": "dependson-test",
   "targets": {
+    "update-config": {
+      "executor": "nx:noop",
+      "outputs": [],
+      "options": {},
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
@@ -51,6 +60,12 @@
       "defaultConfiguration": "production"
     },
     "serve": {
+      "dependsOn": [
+        {
+          "target": "update-config",
+          "projects": "self"
+        }
+      ],
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
