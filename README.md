@@ -4,6 +4,13 @@
 
 This project was generated using [Nx](https://nx.dev).
 
+The following project was
+```
+npx create-nx-workspace@latest
+npm install -D @nrwl/angular
+nx g @nrwl/angular:application dummy
+```
+
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
 🔎 **Smart, Fast and Extensible Build System**
